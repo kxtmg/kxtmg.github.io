@@ -5,37 +5,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <html>
     <body>
-        <div class="center">
+        <div class="center" style="display: none;">
             <div class="nav">
-                <a href=index.html><p class="tabs">home</p></a>
-                <a href=schedule.html><p class="tabs">schedule</p></a>
+                <a><p class="tabs" id="homeTab">home</p></a>
+                <a><p class="tabs" id="scheduleTab">schedule</p></a>
                 <p class="tabs">about me</p>
-                <a href=contact.html><p class="tabs">contact</p></a>
+                <a><p class="tabs" id="contactTab">contact</p></a>
             </div>
             <div class="line"></div>
-            <div class="about">
-                <img src="pfp.jpg">
-                <div class="description">
-                    <h1>Hello!</h1>
-                    <p> Welcome to the lively and entertaining world of kumi tokie
-                         – your friendly neighborhood VTuber streamer on Twitch.</br></br>
-                         Embrace the charm of a streamer who may not claim the title
-                         of the gaming elite but certainly wears the crown for creating an
-                         atmosphere that's all about having a blast. 
-                        </p>
+            <div class="page" id="home" style="display: none;">
+                <div class="about">
+                    <img src="pfp.jpg">
+                    <div class="description">
+                        <h1>Hello!</h1>
+                        <p> Welcome to the lively and entertaining world of kumi tokie
+                            – your friendly neighborhood VTuber streamer on Twitch.</br></br>
+                            Embrace the charm of a streamer who may not claim the title
+                            of the gaming elite but certainly wears the crown for creating an
+                            atmosphere that's all about having a blast. 
+                            </p>
+                    </div>
+                </div>
+                <div class="bottomline"></div>
+                <div class="socials">
+                    <a href="https://www.twitch.tv/kumitokie"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="https://twitter.com/kumitokie"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UClBEHjp7-kM6mwtwmpepsVw"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/kxtmg"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
-            <div class="bottomline"></div>
-            <div class="socials">
-                <a href="https://www.twitch.tv/kumitokie"><i class="fa-brands fa-twitch"></i></a>
-                <a href="https://twitter.com/kumitokie"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.youtube.com/channel/UClBEHjp7-kM6mwtwmpepsVw"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://github.com/kxtmg"><i class="fa-brands fa-github"></i></a>
+            <div class="page" id="schedule" style="display: none;">
+                <p id="month">April</p>
+                <div class="credits">credit: <a href="https://ko-fi.com/rosuwon/shop">@rosuwon</a></div>
+            </div>
+            <div class="page" id="contact" style="display: none;">
+                <div class="formbox">
+                    <form>
+                        <div class="detailform">
+                            <input id="info" type="text" id="name" name="name" placeholder="Name">    
+                            <input id="info" type="text" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="detailform">
+                            <textarea id="message" name="message" rows="15" cols="63" placeholder="Leave a message..."></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="module" src="./schedule.js"></script>
+    <script type="module" src="./navbar.js"></script>
 </html>
